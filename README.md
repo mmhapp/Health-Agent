@@ -1,16 +1,15 @@
 # Health Agent
 
-Hyödynnä Applen Kuntoilu- ja Terveys-dataa ja paikallinen LLM-pohjainen tekoälyagentti oman terveyden edistämiseen. Käytössä kardiovaskulaarinen data (sykevälivaihtelu, hengitystaajuus, leposyke, rannelämpö, happisaturaatio) ja EKG-data
+Cardiovascular parameters and ECG flowing through an ETL pipeline into a local  LLM.
 
-Data käsitellään paikallisesti ja kielimallikutsut tehdään paikallisella kielimallilla `smollm2:135m-instruct-q2_K`. Tietosuoja on huomioitu – yksityiset tiedot eivät poistu koneelta. Laskenta tapahtuu paikallisesti, eikä dataa lähetetä ulkopuolisille palvelimille.
-Kielimalli vertaa arvoja perusarvoihin (baseline), jotka on määritetty koodissa käsin. Tämä ei ole lääkinnällinen laite eikä tee diagnooseja.
+Applen Kuntoilu- ja Terveys-datan sekä paikallisen LLM-pohjainen tekoälyagentin hyödyntäminen oman terveyden edistämiseen. Käytössä kardiovaskulaarinen data (sykevälivaihtelu, hengitystaajuus, leposyke, rannelämpö, happisaturaatio) ja EKG-data
 
-Käyttöönotto: lataa koodi, vie oma terveysdatasi Applen Terveys- ja Pikakomennot-sovelluksilla ja tallenna tiedostot projektin kansioihin.
+Data käsitellään paikallisesti ja kutsut tehdään paikallisella kielimallilla `smollm2:135m-instruct-q2_K`. Tietosuoja on huomioitu – yksityiset tiedot eivät poistu koneelta, laskenta tapahtuu paikallisesti, eikä dataa lähetetä ulkopuolisille palvelimille.
+Kielimalli vertaa arvoja perusarvoihin (baseline), jotka on määritetty koodissa käsin.
 
----
+Käyttöönotto: lataa koodi, vie oma terveysdatasi iPhonen Terveys- ja Pikakomennot-sovelluksilla ja tallenna tiedostot projektin kansioihin.
 
 ## Instructions
-
 
 Asenna riippuvuudet
 * (ollama pull smollm2:135m-instruct-q2_K)
@@ -24,8 +23,6 @@ Avaa pääte tässä kansiossa ja aja:
 * python health.py cardio
 
 EKG-kuvat avautuvat näyttöön, jonka jälkeen tekoälyraportti tulostuu päätteeseen.
-
----
 
 ## Project
 
@@ -49,7 +46,6 @@ Health Agent/
                                                                                            │
 [ Tulosteet & Raportti ] ◄─────────────────────────────────────────────────────────────────┘
 ```
----
 
 ## License
 
