@@ -1,7 +1,5 @@
 # Health Agent
 
-Cardiovascular parameters and ECG flowing through an ETL pipeline into a local  LLM.
-
 Applen Kuntoilu- ja Terveys-datan sekä paikallisen LLM-pohjainen tekoälyagentin hyödyntäminen oman terveyden edistämiseen. Käytössä kardiovaskulaarinen data (sykevälivaihtelu, hengitystaajuus, leposyke, rannelämpö, happisaturaatio) ja EKG-data.
 
 Data käsitellään paikallisesti ja kutsut tehdään paikallisella kielimallilla `smollm2:135m-instruct-q2_K`. Tietosuoja on huomioitu – yksityiset tiedot eivät poistu koneelta, laskenta tapahtuu paikallisesti, eikä dataa lähetetä ulkopuolisille palvelimille.
